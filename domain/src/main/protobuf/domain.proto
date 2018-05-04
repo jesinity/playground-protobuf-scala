@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package it.jesinity.playground.protobuf;
+
+message SIPRegisterRequest {
+
+    string from = 1;
+    string to = 2;
+    string callId = 3;
+    int32 maxForward = 4;
+    string via = 5;
+    string callSequence = 6;
+    string contact = 7;
+    int32 contentLength = 8;
+
+}
+
+message SIPRegisterResponse {
+
+    string from = 1;
+    string to = 2;
+    string callId = 3;
+    int32 responseCode = 4;
+
+}
+
+message ProtocolMessage {
+    oneof payload {
+        SIPRegisterRequest sipRegisterRequest = 1;
+        SIPRegisterResponse sipRegisterResponse = 2;
+    }
+}

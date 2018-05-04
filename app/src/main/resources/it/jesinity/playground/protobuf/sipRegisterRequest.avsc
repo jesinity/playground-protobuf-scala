@@ -1,0 +1,39 @@
+{
+  "namespace": "it.jesinity.playground.avro",
+  "type": "record",
+  "name": "SipRegisterRequest",
+  "fields": [
+    {
+      "name": "from",
+      "type": "string"
+    },
+    {
+      "name": "to",
+      "type": "string"
+    },
+    {
+      "name": "callId",
+      "type": "string"
+    },
+    {
+      "name": "maxForward",
+      "type": "int"
+    },
+    {
+      "name": "via",
+      "type": "string"
+    },
+    {
+      "name": "callSequence",
+      "type": "int"
+    },
+    {
+      "name": "contact",
+      "type": "string"
+    },
+    {
+      "name": "contentLength",
+      "type": "int"
+    }
+  ]
+}
